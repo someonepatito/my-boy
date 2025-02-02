@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores Azules</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ramo">
+        <div class="flor"></div>
+        <div class="flor"></div>
+        <div class="flor"></div>
+    </div>
+</body>
+</html> 
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ramo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.flor {
+    width: 50px;
+    height: 50px;
+    background-color: #1e90ff; /* Azul brillante */
+    border-radius: 50%;
+    position: relative;
+}
+
+.flor:before, .flor:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #1e90ff;
+    border-radius: 50%;
+    top: -15px;
+}
+
+.flor:after {
+    top: auto;
+    bottom: -15px;
+}
